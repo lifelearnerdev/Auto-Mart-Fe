@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App';
 
-const App = () => {
-  return <div>Welcome to Auto Mart</div>;
-};
 
 ReactDOM.render(<App />, document.getElementById('root'));
