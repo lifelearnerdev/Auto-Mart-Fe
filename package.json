@@ -1,0 +1,110 @@
+{
+  "name": "auto-mart-fe",
+  "version": "1.0.0",
+  "description": "Auto Mart is an online marketplace for automobiles of diverse makes, model or body type. With Auto Mart, users can sell their cars or buy from trusted dealerships or private sellers.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "test": "jest",
+    "test:watch": "jest --watch --coverage --colors",
+    "test:coverage": "jest --coverage --colors",
+    "test:CI": "cross-env CI=true && jest --coverage --colors",
+    "format": "prettier --write \"src/**/*.js\"",
+    "eslint-fix": "eslint --fix \"src/**/*.js\"",
+    "lint": "eslint . --ingore-path .eslintignore",
+    "coverage": "jest --coverage --colors && cat ./coverage/lcov.info | coveralls",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malaba6/Auto-Mart-Fe.git"
+  },
+  "keywords": [
+    "by",
+    "used",
+    "cars",
+    "in",
+    "uganda"
+  ],
+  "author": "Eric Malaba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Malaba6/Auto-Mart-Fe/issues"
+  },
+  "homepage": "https://github.com/Malaba6/Auto-Mart-Fe#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "coveralls": "^3.1.0",
+    "dotenv-webpack": "^1.8.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "express": "^4.17.1",
+    "jest": "^26.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sass-loader": "^8.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "enzyme": "^3.11.0",
+    "eslint": "^6.8.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.19.0",
+    "html-webpack-plugin": "^4.3.0",
+    "jest-canvas-mock": "^2.2.0",
+    "prettier": "2.0.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-server": "^0.1.2"
+  },
+  "pre-commit": [
+    "lint",
+    "test:coverage"
+  ],
+  "jest": {
+    "setupFiles": [
+      "jest-canvas-mock"
+    ],
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/enzyme.config.js"
+    ],
+    "modulePaths": [
+      "src/components/",
+      "__tests__"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx",
+      "node"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.js",
+      "!<rootDir>/src/index.js",
+      "!<rootDir>/coverage/**/*.*",
+      "!<rootDir>/build/**/*.*",
+      "!<rootDir>/cypress/**/*.*"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 79,
+        "functions": 80,
+        "lines": 90,
+        "statements": 89
+      }
+    }
+  },
+  "engines": {
+    "node": "12.16.x"
+  }
+}
