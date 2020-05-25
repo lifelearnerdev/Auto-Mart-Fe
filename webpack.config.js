@@ -3,17 +3,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  devtool: 'inline-source-map',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js'
   },
+  node: {
+    fs: 'empty'
+  },
   devServer: {
     historyApiFallback: {
       disableDotRule: true
     }
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [
@@ -45,7 +50,7 @@ module.exports = {
       },
       {
         test: /\.(tsv|csv)$/,
-        user: ['csv-loader']
+        use: ['csv-loader']
       },
       {
         test: /\.xml$/,
