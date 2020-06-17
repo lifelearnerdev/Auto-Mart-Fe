@@ -1,0 +1,24 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    // font-family: Avenir, Medium;
+}
+
+.logo{
+    width: 12%;
+}
+
+.try {
+    color: rgb(70, 70, 70);
+}
+
+@media only screen and (max-width:450px) {
+    .logo{
+        width: 40%;
+    }
+}
+@media only screen and (max-width:900px) {
+    .logo{
+        width: 30%;
+    }
+}
