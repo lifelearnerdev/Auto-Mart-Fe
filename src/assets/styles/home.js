@@ -18,8 +18,8 @@ const styles = theme => ({
     background: 'rgb(212, 7, 7)',
     fontWeight: 'bold',
     fontSize: '1rem',
-    height: '3em',
-    width: '8em',
+    height: '2.7em',
+    width: '7em',
     marginBottom: '2em',
     [theme.breakpoints.down('sm')]: {
       width: '6em',
@@ -114,7 +114,7 @@ const styles = theme => ({
     }
   },
   imgContainer: {
-    width: '70%',
+    width: '80%',
     height: '20em',
     overflow: 'none',
     borderRadius: '5%',

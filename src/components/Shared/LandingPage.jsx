@@ -119,7 +119,7 @@ const LandingPage = ({ classes }) => (
         className={classes.typeWrap}>
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.typeTextWrap}>
           <Typography className={classes.typeTitle}>
-          Used and new for all prices
+          Used and new vehicles
           </Typography>
           <Typography className={classes.typeBody}>
           You will find new cars, old used cars, luxiry cars,
