@@ -19,7 +19,7 @@ const styles = theme => ({
     fontWeight: 'bold',
     fontSize: '1rem',
     height: '3em',
-    width: '10em',
+    width: '8em',
     marginBottom: '2em',
     [theme.breakpoints.down('sm')]: {
       width: '6em',
@@ -38,7 +38,7 @@ const styles = theme => ({
     marginBottom: '0.8em',
     color: '#FFFFFF',
     width: '100%',
-    fontSize: '4rem',
+    fontSize: '3rem',
     fontWeight: 'bolder',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.5rem'
@@ -84,18 +84,18 @@ const styles = theme => ({
     }
   },
   resizeTextField: {
-    fontSize: '1.5rem',
+    fontSize: '1.2rem',
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.8rem'
     }
   },
   createBtn: {
-    height: '2.7em',
+    height: '3.2em',
     borderTopLeftRadius: '0px',
     borderBottomLeftRadius: '0px',
     boxShadow: 'none',
     background: 'rgb(212, 7, 7)',
-    fontSize: '1.5rem',
+    fontSize: '1.2rem',
     color: '#FFFFFF',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1rem',
@@ -103,7 +103,7 @@ const styles = theme => ({
     }
   },
   typoSmall: {
-    fontSize: '1.5rem',
+    fontSize: '1.3rem',
     color: 'white',
     marginTop: '0.8em',
     [theme.breakpoints.down('sm')]: {
@@ -115,28 +115,28 @@ const styles = theme => ({
   },
   imgContainer: {
     width: '70%',
-    height: '25em',
+    height: '20em',
+    overflow: 'none',
     borderRadius: '5%',
     [theme.breakpoints.down('lg')]: {
       width: '100%',
-      height: '13em'
+      height: '17em'
     },
     [theme.breakpoints.down('sm')]: {
-      height: '15em'
-    },
-    padding: '5%'
+      width: '100%'
+    }
   },
   typeWrap: {
-    padding: '0 10em',
+    padding: '5em',
     color: 'white',
     border: 'none',
     background: '#070707',
     borderTop: '0.7em solid #202020',
     [theme.breakpoints.down('lg')]: {
-      padding: '0 5em'
+      padding: '2em'
     },
     [theme.breakpoints.down('sm')]: {
-      padding: '0',
+      padding: '2em 0',
       borderTop: '0.5em solid #202020'
     }
   },
@@ -146,20 +146,20 @@ const styles = theme => ({
     }
   },
   typeTitle: {
-    fontSize: '3.7rem',
+    fontSize: '3rem',
     fontWeight: 'bold',
     [theme.breakpoints.down('lg')]: {
       fontSize: '2rem'
     }
   },
   typeBody: {
-    fontSize: '2rem',
+    fontSize: '1.5rem',
     [theme.breakpoints.down('lg')]: {
       fontSize: '1rem'
     }
   },
   footer: {
-    padding: '5% 20%',
+    padding: '7% 20%',
     background: '#070707',
     border: 'none',
     borderTop: '0.7em solid #202020',
