@@ -48,7 +48,7 @@ const LandingPage = ({ classes }) => {
               className={classes.signinBtn}
               id="login"
               variant="contained"
-              href="#"
+              href="/login"
             >
             Sign In
             </Button>

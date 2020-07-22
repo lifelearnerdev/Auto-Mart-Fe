@@ -6,7 +6,7 @@ const signup = (user, location) => {
   const loading = () => ({ type: types.SIGNUP_LOADING });
   const success = () => ({
     type: types.SIGNUP_SUCCESS,
-    message: 'User successfully registered'
+    message: 'User has successfully registered'
   });
   const fail = error => ({ type: types.SIGNUP_FAIL, error });
 
