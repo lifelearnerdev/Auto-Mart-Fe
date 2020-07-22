@@ -1,6 +1,9 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
 import types from './loginActionTypes';
 import notify from '../Toaster';
+
+dotenv.config();
 
 const login = (user, location) => {
   const loading = () => ({ type: types.LOGIN_LOADING });
@@ -13,6 +16,7 @@ const login = (user, location) => {
   return async dispatch => {
     try {
       dispatch(loading());
+      console.log(`${process.env.API_URL}`);
       const res = await axios.post(`${process.env.API_URL}auth/signin`, user);
       const { token } = res.data?.data;
       if (token) {
