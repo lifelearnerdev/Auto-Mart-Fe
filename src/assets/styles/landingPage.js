@@ -21,6 +21,9 @@ const styles = theme => ({
     height: '2.7em',
     width: '7em',
     marginBottom: '2em',
+    ['&:hover']: {
+      background: '#070707'
+    },
     [theme.breakpoints.down('sm')]: {
       width: '6em',
       height: '2em',
@@ -48,7 +51,6 @@ const styles = theme => ({
     }
   },
   title: {
-    margin: 'px',
     padding: '0px 0.5em',
     textAlign: 'center',
     alignContent: 'center',
@@ -60,7 +62,13 @@ const styles = theme => ({
     boxShadow: 'none',
     [theme.breakpoints.down('sm')]: {
       width: '95%'
+    },
+    [theme.breakpoints.only('md')]: {
+      top: '60%'
     }
+  },
+  helperText: {
+    background: 'transparent'
   },
   textWrapper: {
     margin: '0 auto',
@@ -97,6 +105,9 @@ const styles = theme => ({
     background: 'rgb(212, 7, 7)',
     fontSize: '1.2rem',
     color: '#FFFFFF',
+    ['&:hover']: {
+      background: '#070707'
+    },
     [theme.breakpoints.down('sm')]: {
       fontSize: '1rem',
       height: '3.2em'
