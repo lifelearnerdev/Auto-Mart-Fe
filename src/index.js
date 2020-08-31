@@ -13,11 +13,11 @@ const theme = AppTheme;
 
 
 ReactDOM.render(
-  <Provider store={store}>
-    <MuiThemeProvider theme={theme}>
+  <MuiThemeProvider theme={theme}>
+    <Provider store={store}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </MuiThemeProvider>
-  </Provider>
+    </Provider>
+  </MuiThemeProvider>
   , document.getElementById('root'));

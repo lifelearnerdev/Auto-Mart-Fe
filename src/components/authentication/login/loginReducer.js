@@ -1,6 +1,12 @@
 import types from './loginActionTypes';
+import userAuth from './isAuth';
 
-const initialState = {};
+const user = userAuth();
+
+const initialState = {
+  ...user
+};
+
 const login = (state = initialState, action) => {
   switch (action.type) {
   case types.LOGIN_LOADING:
@@ -13,7 +19,8 @@ const login = (state = initialState, action) => {
     return {
       ...state,
       isLoading: false,
-      message: action.message
+      message: action.message,
+      isAuthenticated: true
     };
   case types.LOGIN_FAIL:
     return {

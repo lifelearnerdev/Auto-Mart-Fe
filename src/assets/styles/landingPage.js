@@ -142,13 +142,13 @@ const styles = theme => ({
     color: 'white',
     border: 'none',
     background: '#070707',
-    borderTop: '0.7em solid #202020',
+    borderTop: '0.5em solid #202020',
     [theme.breakpoints.down('lg')]: {
       padding: '2em'
     },
     [theme.breakpoints.down('sm')]: {
       padding: '2em 0',
-      borderTop: '0.5em solid #202020'
+      borderTop: '0.3em solid #202020'
     }
   },
   typeTextWrap: {
@@ -167,49 +167,6 @@ const styles = theme => ({
     fontSize: '1.5rem',
     [theme.breakpoints.down('lg')]: {
       fontSize: '1rem'
-    }
-  },
-  footer: {
-    padding: '7% 20%',
-    background: '#070707',
-    border: 'none',
-    borderTop: '0.7em solid #202020',
-    [theme.breakpoints.down('sm')]: {
-      padding: '5% 15%',
-      borderTop: '0.5em solid #202020'
-    }
-  },
-  links: {
-    fontFamily: 'medium, Arial',
-    color: '#606060',
-    display: 'block',
-    fontSize: '1.2rem',
-    marginTop: '1.2em',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem',
-      marginTop: '1em'
-    }
-  },
-  fooL: {
-    paddingRight: '5%',
-    [theme.breakpoints.down('sm')]: {
-      paddingLeft: '0%'
-    }
-  },
-  fooR: {
-    paddingLeft: '20%',
-    [theme.breakpoints.down('sm')]: {
-      paddingLeft: '5%'
-    }
-  },
-  fooHead: {
-    fontFamily: 'medium, Arial',
-    color: '#606060',
-    display: 'block',
-    fontSize: '1.5rem',
-    marginTop: '1.2em',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1.2rem'
     }
   }
 });

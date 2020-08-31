@@ -16,8 +16,8 @@ const signup = (user, location) => {
       .then(
         res => {
           dispatch(success());
-          notify('User successfully registere');
           location.assign('/login');
+          notify('User successfully registere');
         },
         err => {
           dispatch(fail(err.response?.data?.error ?? 'Network error'));
