@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+// import { Redirect } from 'react-router-dom';
 import { Grid, Typography, TextField,
   Button, Container, Link, CircularProgress,
   InputLabel, FormControl, Input, IconButton } from '@material-ui/core';
 import { Visibility, VisibilityOff } from '@material-ui/icons';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import QueryString from 'query-string';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core';
 import styles from '../../assets/styles/containers/formContainer';
@@ -31,7 +34,7 @@ import login from '../authentication/login/loginAction';
 const Form = (
   {
     classes, title, subtitle, name, email, password, confirmPassword,
-    loginLink, forgotPassword, alreadyAccount, signInUp, getStarted
+    loginLink, forgotPassword, alreadyAccount, signInUp, getStarted, location
   }) => {
   const [fullName, setName] = useState('');
   const [emailAddress, setEmail] = useState(localStorage.getItem('user_email') || '');
@@ -61,12 +64,20 @@ const Form = (
   const loading = loadingS || loadingL;
   let loginError = useSelector(state => state.login?.error);
   let signupError = useSelector(state => state.signup?.error);
+  const isAuthenticated = useSelector(state => state.login.isAuthenticated);
   const dispatch = useDispatch();
+  const history = useHistory();
+
+  const redirect = () => {
+    const { redirectTo } = QueryString.parse(location.search);
+    return isAuthenticated ? history.push(redirectTo || '/cars') : null;
+  };
 
   useEffect(() => {
     setPassword('');
     setConfirm('');
-  }, [loginError, signupError]);
+    if (isAuthenticated) redirect();
+  }, [loginError, signupError, isAuthenticated]);
 
   const handlePasswordVisibility = () => {
     if (showPassword) hidePassword(false);

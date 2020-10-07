@@ -1,4 +1,8 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import {
+  createMuiTheme,
+  responsiveFontSizes,
+  fade
+} from '@material-ui/core/styles';
 
 const AppTheme = createMuiTheme({
   palette: {
@@ -10,6 +14,9 @@ const AppTheme = createMuiTheme({
     },
     error: {
       main: '#FF4141'
+    },
+    border: {
+      main: `solid ${fade('#000000', 0.15)} thin`
     }
   },
   typography: {

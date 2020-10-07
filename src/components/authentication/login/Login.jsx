@@ -1,7 +1,7 @@
 import React from 'react';
 import LoginForm from '../../containers/FormContainer';
 
-const Login = () => {
+const Login = ({ location }) => {
   return (
     <>
       <LoginForm
@@ -12,6 +12,7 @@ const Login = () => {
         forgotPassword="Forgot your Password?"
         signInUp="Sign In"
         getStarted
+        location={location}
       />
     </>
   );

@@ -16,14 +16,12 @@ const login = (user, location) => {
   return async dispatch => {
     try {
       dispatch(loading());
-      console.log(`${process.env.API_URL}`);
       const res = await axios.post(`${process.env.API_URL}auth/signin`, user);
       const { token } = res.data?.data;
       if (token) {
         dispatch(success());
-        notify('User successfully logged in');
         localStorage.setItem('token', token);
-        location.assign('/');
+        notify('User successfully logged in');
       }
     } catch (err) {
       dispatch(fail(err.response?.data?.error ?? 'Network error'));

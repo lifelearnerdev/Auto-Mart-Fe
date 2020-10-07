@@ -10,15 +10,27 @@ html, body {
 
 .try {
     color: rgb(70, 70, 70);
+    font-weight: lighter;
+    // color: rgb(48, 48, 48);
 }
 
+.logo-nav {
+    margin-top: 0.5em;
+    width: 8%
+}
+
+
 @media only screen and (max-width:450px) {
-    .logo{
+    .logo {
         width: 40%;
     }
+
 }
 @media only screen and (max-width:900px) {
     .logo{
         width: 30%;
+    }
+    .logo-nav {
+        display: none;
     }
 }
