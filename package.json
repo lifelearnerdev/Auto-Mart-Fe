@@ -45,7 +45,7 @@
     "csv-loader": "^3.0.3",
     "enzyme-adapter-react-16": "^1.15.2",
     "es6-promise": "^4.2.8",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "file-loader": "^6.0.0",
     "history": "^5.0.0",
     "image-webpack-loader": "^6.0.0",
